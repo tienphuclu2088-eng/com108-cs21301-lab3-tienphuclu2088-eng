@@ -19,22 +19,32 @@
 
 int main(){
     float diem;
-    printf("Nhap diem cua sinh vien (0-10): ");
+    printf("NHAP DIEM SINH VIEN (0-10): ");
     scanf("%f", &diem);
-    if(diem < 0 || diem > 10){
-        printf("Diem khong hop le! Vui long nhap lai diem trong khoang 0-10.\n");
-    } else if(diem >= 9){
-        printf("Hoc luc xuat sac\n");
-    } else if(diem >= 8){
-        printf("Hoc luc gioi\n");
-    } else if(diem >= 6.5){
-        printf("Hoc luc kha\n");
-    } else if(diem >= 5){
-        printf("Hoc luc trung binh\n");
-    } else if(diem >= 3.5){
-        printf("Hoc luc yeu\n");
+    // Kiểm tra điểm hợp lệ
+    if (diem < 0 || diem > 10) {
+        printf("DIEM KHONG HOP LE! Vui long nhap diem tu 0 den 10.\n");
     } else {
-        printf("Hoc luc kem\n");
+        printf("HOC LUC: ");
+        
+        if (diem >= 9) {
+            printf("XUAT SAC\n");
+        } 
+        else if (diem >= 8) {  
+            printf("GIOI\n");
+        }
+        else if (diem >= 6.5) { 
+            printf("KHA\n");
+        }
+        else if (diem >= 5) {   
+            printf("TRUNG BINH\n");
+        }
+        else if (diem >= 3.5) { 
+            printf("YEU\n");
+        }
+        else {                
+            printf("KEM\n");
+        }
     }
     return 0;
 }
